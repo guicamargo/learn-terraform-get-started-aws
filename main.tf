@@ -8,16 +8,18 @@ terraform {
 
   required_version = ">= 1.2"
 }
+
 provider "aws" {
+  profile = "default"
   region = "us-east-1"
 }
 
 resource "aws_instance" "app_server" {
   ami           = "ami-061fe7df6ad657197"
   instance_type = "t2.micro"
-  key_name = "learn-terraform"
+  key_name      = "learn-terraform"
 
   tags = {
-    Name = "learn-terraform"
+    Name = "terraform-ansible-python"
   }
 }
