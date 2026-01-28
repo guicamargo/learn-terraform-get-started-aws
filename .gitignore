@@ -8,8 +8,7 @@
 # .tfstate files
 *.tfstate
 *.tfstate.*
-# chave de acesso
-*.pem 
+
 # Crash log files
 crash.log
 crash.*.log
@@ -39,3 +38,65 @@ override.tf.json
 terraform.rc
 
 # End of https://www.toptal.com/developers/gitignore/api/terraform
+
+### Chaves SSH - CRÍTICO ###
+# Chaves privadas
+*.pem
+*.key
+*-DEV
+*-Prod
+IaC-*
+
+# Chaves públicas (também contêm informação sobre seu sistema)
+*.pub
+
+### Terraform Lock Files ###
+.terraform.lock.hcl
+
+### Ansible ###
+*.retry
+.vault_pass
+*.vault
+
+### Logs ###
+*.log
+*.out
+nohup.out
+django.log
+
+### Backups ###
+*.backup
+*.bak
+terraform.tfstate.*.backup
+
+### IDEs e Editores ###
+.vscode/
+.idea/
+*.iml
+*.swp
+*.swo
+*~
+
+### Sistema Operacional ###
+.DS_Store
+Thumbs.db
+desktop.ini
+
+### Python (se houver scripts) ###
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+
+### AWS Credentials ###
+.aws/
+credentials
+config
+*.credentials
+
+### Arquivos temporários ###
+tmp/
+temp/
+*.tmp
