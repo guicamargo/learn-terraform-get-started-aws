@@ -1,6 +1,5 @@
 resource "aws_security_group" "acesso-geral" {
-  name        = "acesso-geral"
-  description = "Security group for general access"
+  name        = var.security-group
 
 
   ingress {
